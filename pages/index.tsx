@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Script from 'next/script'
 import CustomHeader from '../components/CustomHeader'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
+      <title>Benchapon Sakhonkam - Full stack developer</title>
         <CustomHeader/>
       </Head>
       <main className={styles.main}>
