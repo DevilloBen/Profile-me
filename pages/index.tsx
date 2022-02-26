@@ -10,7 +10,6 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <CustomHeader/>
-        <Script async defer data-domain="evandro.sasse.it" src="https://plausible.io/js/plausible.js"></Script>
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
