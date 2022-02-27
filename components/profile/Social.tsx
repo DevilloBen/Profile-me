@@ -1,16 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import { faGithub, faLinkedin, faAngellist, faGitlab, faHackerNewsSquare } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faAngellist, faGitlab, faHackerNewsSquare, faFreeCodeCamp, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import IconWrapper from "../shared/IconWrapper";
 import SectionTitle from "./SectionTitle";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 const Social = () => (
   <section>
     <SectionTitle>More about me</SectionTitle>
-
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
       <div className="flex items-center">
         <IconWrapper>
@@ -27,48 +27,48 @@ const Social = () => (
           <FontAwesomeIcon icon={faGithub} />
         </IconWrapper>
 
-        <a target="_blank" rel="noreferrer" href="https://github.com/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://github.com/DevilloBen/" className="link">
           GitHub
         </a>
       </div>
 
       <div className="flex items-center">
         <IconWrapper>
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} className="text-blue-700"/>
         </IconWrapper>
 
-        <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/benchapon" className="link">
           LinkedIn
         </a>
       </div>
 
       <div className="flex items-center">
         <IconWrapper>
-          <FontAwesomeIcon icon={faAngellist} />
+          <FontAwesomeIcon icon={faCode} width={14} />
         </IconWrapper>
 
         <a target="_blank" rel="noreferrer" href="https://angel.co/u/evsasse" className="link">
-          AngelList
+          Codesignal
         </a>
       </div>
 
       <div className="flex items-center">
         <IconWrapper>
-          <FontAwesomeIcon icon={faGitlab} />
+          <FontAwesomeIcon icon={faGitlab} className="text-orange-700"/>
         </IconWrapper>
 
-        <a target="_blank" rel="noreferrer" href="https://gitlab.com/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://gitlab.com/BenchaponSakhonkam" className="link">
           GitLab
         </a>
       </div>
 
       <div className="flex items-center">
         <IconWrapper>
-          <FontAwesomeIcon icon={faHackerNewsSquare} />
+          <FontAwesomeIcon icon={faFacebook} className="text-blue-700"/>
         </IconWrapper>
 
-        <a target="_blank" rel="noreferrer" href="https://news.ycombinator.com/user?id=evsasse" className="link">
-          HackerNews
+        <a target="_blank" rel="noreferrer" href="https://www.facebook.com/evilbenchapon/" className="link">
+          Facebook
         </a>
       </div>
     </div>

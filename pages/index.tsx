@@ -10,13 +10,10 @@ import Picture from '../components/profile/Picture'
 import Projects from '../components/profile/Projects'
 import Social from '../components/profile/Social'
 import { database } from '../firebaseConfig'
-
-interface GetDataTest {
-  id: string
-  node: string
-}
+import { GetDataTest } from '../modules/ProfileModule'
 
 const dbInstance = collection(database, 'test');
+
 const Home: NextPage = () => {
   const [notesArray, setNotesArray] = useState<GetDataTest[]>();
 
@@ -36,7 +33,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Benchapon Sakhonkam - Full stack developer</title>
+        <title>Benchapon Sakhonkam | Full stack developer</title>
       </Head>
       <main className="container mx-auto p-5 my-8">
         <div className="grid grid-cols-4 gap-8">

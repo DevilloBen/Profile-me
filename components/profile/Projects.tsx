@@ -1,22 +1,20 @@
-import React from "react";
-import { faDocker } from "@fortawesome/free-brands-svg-icons";
-import { faIdBadge } from "@fortawesome/free-regular-svg-icons";
-import { faPlane } from "@fortawesome/free-solid-svg-icons";
+import { faFile } from "@fortawesome/free-regular-svg-icons";
+import { faFireFlameCurved, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import React from "react";
 import IconWrapper from "../shared/IconWrapper";
 import SectionTitle from "./SectionTitle";
+
 
 const Project = ({ children, name, href, icon }:any) => (
   <div className="mb-2 md:mb-0">
     <span className="inline-flex items-center">
-      {icon}
+      {icon}&nbsp;
       <a target="_blank" rel="noreferrer" href={href} className="link">
         {name}
       </a>
       ,&nbsp;
     </span>
-
     <span className="inline-block">{children}.</span>
   </div>
 );
@@ -24,42 +22,42 @@ const Project = ({ children, name, href, icon }:any) => (
 const Projects = () => (
   <section>
     <SectionTitle>Projects</SectionTitle>
-
     <Project
-      name="setup-docker-rails"
-      href="https://github.com/evsasse/setup-docker-rails"
+      name="Ezygas"
+      href="https://ezygas.co/"
       icon={
         <IconWrapper>
-          <FontAwesomeIcon icon={faDocker} />
+          <FontAwesomeIcon icon={faFireFlameCurved} className="text-red-500" />
         </IconWrapper>
       }
     >
-      easy setup of Rails projects using Docker
+      a wizard to make managing your gas shop. It's easy in one website.
     </Project>
-
     <Project
-      name="profile"
-      href="https://github.com/evsasse/profile"
+      name="PTT Product"
+      href="https://www.pttplc.com/th/Home.aspx"
       icon={
         <IconWrapper>
-          <FontAwesomeIcon icon={faIdBadge} width={12} />
+          <FontAwesomeIcon icon={faLaptopCode} className="text-black-500" />
         </IconWrapper>
       }
     >
-      personal website, built using Next.js and Tailwind CSS
+      Many projects developed by me
     </Project>
 
     <Project
-      name="Can I fly?"
-      href="https://canifly.1313labs.com/"
+      name="Resume"
+      href="https://github.com/DevilloBen/Profile-me"
       icon={
         <IconWrapper>
-          <FontAwesomeIcon icon={faPlane} />
+          <FontAwesomeIcon icon={faFile} width={14} className="text-gray-700" />
         </IconWrapper>
       }
     >
-      information about Travel Restrictions during the COVID-19 pandemic
+      personal website, built using Next.js, Typescript and Tailwind CSS
     </Project>
+
+
 
     <div>
       <i aria-hidden className="fas fa-fw mr-1 fa-hourglass-half"></i>

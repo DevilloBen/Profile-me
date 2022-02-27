@@ -2,6 +2,7 @@ import React from "react";
 
 const IconWrapper = ({ children, className, width = 15 }:any = {}) => {
   const margin = (24 - width) / 2;
+
   return (
     <div className={`${className} inline-block`}>
       <div style={{ marginRight: margin, marginLeft: margin }}>

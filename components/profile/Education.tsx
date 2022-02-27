@@ -1,6 +1,7 @@
 import React from "react";
+import { SchoolProps } from "../../modules/ProfileModule";
 
-const School = ({ children, href, name, detail }:any) => (
+const School = ({ children, href, name, detail }: SchoolProps) => (
   <p className="mb-2 md:mb-0">
     <span className="inline-block mr-1">{children}</span>
     <span className="inline-block">
@@ -14,16 +15,12 @@ const School = ({ children, href, name, detail }:any) => (
 
 const Education = () => (
   <section>
-    <School name="UFSC" href="https://ufsc.br/" detail="Brazil, 2017">
-      Bachelor of Computer Science from
+    <School name="Silpakorn University" href="https://www.su.ac.th" detail="Thailand, 2018">
+      Bachelor’s Degree of Computer Science from
     </School>
 
-    <School name="Waseda University" href="https://www.waseda.jp" detail="Japan, 2016">
-      Spent one year studying at
-    </School>
-
-    <School name="CEDUP HH" href="http://www.ceduphh.com.br/" detail="Brazil, 2012">
-      Associate's degree on Software Development from
+    <School name="Samutsakhonwittayalai School" href="http://www.sksc.ac.th/" detail="Thailand, 2012">
+      Completed high school from
     </School>
   </section>
 );
