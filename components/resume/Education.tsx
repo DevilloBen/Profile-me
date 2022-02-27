@@ -4,7 +4,7 @@ import SectionTitle from "../resume/SectionTitle";
 
 const School = ({ children, name, href, where, when }:any) => (
   <div className="mb-2">
-    <a href={href} target="_blank" rel="noopener" className="link mr-1">
+    <a href={href} target="_blank" rel="noreferrer" className="link mr-1">
       {name}
     </a>
 

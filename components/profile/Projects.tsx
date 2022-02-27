@@ -11,7 +11,7 @@ const Project = ({ children, name, href, icon }:any) => (
   <div className="mb-2 md:mb-0">
     <span className="inline-flex items-center">
       {icon}
-      <a target="_blank" rel="noopener" href={href} className="link">
+      <a target="_blank" rel="noreferrer" href={href} className="link">
         {name}
       </a>
       ,&nbsp;

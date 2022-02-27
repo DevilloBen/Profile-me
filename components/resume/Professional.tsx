@@ -7,7 +7,7 @@ const Experience = ({ children, title, href, company, where, when }:any) => (
     <div>
       <h5 className="font-medium">{title}</h5>
       <div className="small">
-        <a href={href} target="_blank" rel="noopener" className="link mr-1">
+        <a href={href} target="_blank" rel="noreferrer" className="link mr-1">
           {company}
         </a>
         - {where} | {when}

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import IconWrapper from "../shared/IconWrapper";
 
-const externalProps = { target: "_blank", rel: "noopener" };
+const externalProps = { target: "_blank", rel: "noreferrer" };
 
 function ProfileButton({ href, className, external, children }:any) {
   const link = (

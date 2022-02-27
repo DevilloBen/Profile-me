@@ -18,7 +18,7 @@ const Header = ({ headings, site, github, linkedin, location, phone, email }:Hea
 
     {site && (
       <p className="text-base">
-        <a target="_blank" rel="noopener" href="https://evandro.sasse.it" className="link">
+        <a target="_blank" rel="noreferrer" href="https://evandro.sasse.it" className="link">
           evandro.sasse.it
         </a>
       </p>
@@ -26,7 +26,7 @@ const Header = ({ headings, site, github, linkedin, location, phone, email }:Hea
 
     {github && (
       <p className="text-base">
-        <a target="_blank" rel="noopener" href="https://github.com/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://github.com/evsasse" className="link">
           github.com/evsasse
         </a>
       </p>
@@ -34,7 +34,7 @@ const Header = ({ headings, site, github, linkedin, location, phone, email }:Hea
 
     {linkedin && (
       <p className="text-base">
-        <a target="_blank" rel="noopener" href="https://linkedin.com/in/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/evsasse" className="link">
           linkedin.com/in/evsasse
         </a>
       </p>

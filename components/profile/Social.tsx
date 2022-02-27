@@ -27,7 +27,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faGithub} />
         </IconWrapper>
 
-        <a target="_blank" rel="noopener" href="https://github.com/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://github.com/evsasse" className="link">
           GitHub
         </a>
       </div>
@@ -37,7 +37,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faLinkedin} />
         </IconWrapper>
 
-        <a target="_blank" rel="noopener" href="https://linkedin.com/in/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/evsasse" className="link">
           LinkedIn
         </a>
       </div>
@@ -47,7 +47,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faAngellist} />
         </IconWrapper>
 
-        <a target="_blank" rel="noopener" href="https://angel.co/u/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://angel.co/u/evsasse" className="link">
           AngelList
         </a>
       </div>
@@ -57,7 +57,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faGitlab} />
         </IconWrapper>
 
-        <a target="_blank" rel="noopener" href="https://gitlab.com/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://gitlab.com/evsasse" className="link">
           GitLab
         </a>
       </div>
@@ -67,7 +67,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faHackerNewsSquare} />
         </IconWrapper>
 
-        <a target="_blank" rel="noopener" href="https://news.ycombinator.com/user?id=evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://news.ycombinator.com/user?id=evsasse" className="link">
           HackerNews
         </a>
       </div>
