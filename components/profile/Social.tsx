@@ -47,7 +47,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faCode} width={14} />
         </IconWrapper>
 
-        <a target="_blank" rel="noreferrer" href="https://angel.co/u/evsasse" className="link">
+        <a target="_blank" rel="noreferrer" href="https://app.codesignal.com/profile/devilloben" className="link">
           Codesignal
         </a>
       </div>

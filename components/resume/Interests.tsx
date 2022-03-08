@@ -1,17 +1,20 @@
 import React from "react";
+import { InterestsProps } from "../../modules/ProfileModule";
 
 import SectionTitle from "./SectionTitle";
 
-const Interests = () => (
+
+
+const Interests = ({ interests }: InterestsProps) => (
   <section className="dont-page-break">
     <SectionTitle>Other Interests</SectionTitle>
 
     <ul className="list-disc list-outside">
-      <li>Elixir, TypeScript, React Native, Electron, Rust</li>
-      <li>Serverless, Docker, DevOps</li>
-      <li>UX, Product Management</li>
-      <li>Remote work, Calm Tech, entrepreneurship</li>
-      <li>Podcasts, coffee, long walks</li>
+      {interests.interests.map((data, index) => {
+        return (
+          <li key={`interests ${index + 1}`}>{data.list}</li>
+        );
+      })}
     </ul>
   </section>
 );

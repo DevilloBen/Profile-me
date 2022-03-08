@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect, useState } from "react";
-import apis from "./api/GetProfileData";
+import React, { useEffect, useMemo, useState } from "react";
 import BackToHomepage from "../components/resume/BackToHomepage";
 import Education from "../components/resume/Education";
 import Header from "../components/resume/Header";
@@ -8,35 +7,33 @@ import Interests from "../components/resume/Interests";
 import Language from "../components/resume/Language";
 import Professional from "../components/resume/Professional";
 import TechnicalSkills from "../components/resume/TechnicalSkills";
-import { EducationObject, ExperienceObject, InterestsObject, LanguagesObject, SkillObject, TypeExp } from "../modules/ProfileModule";
+import { EducationArray, InterestObject, LangObject, SkillObjectUse, TypeExp, UseExpObject } from "../modules";
+import apis from "./api/GetProfileData";
 
 function ResumePage() {
-  const [interests, setInterests] = useState<InterestsObject[]>();
-  const [languages, setLanguages] = useState<LanguagesObject[]>();
-  const [experience, setExperience] = useState<ExperienceObject[]>();
-  const [education, setEducation] = useState<EducationObject[]>();
-  const [skill, setSkill] = useState<SkillObject[]>();
-  const [response, setResponse] = useState<TypeExp | null>();
+  const [interests, setInterests] = useState<InterestObject>();
+  const [languages, setLanguages] = useState<LangObject>();
+  const [experience, setExperience] = useState<UseExpObject>();
+  const [education, setEducation] = useState<EducationArray>();
+  const [skill, setSkill] = useState<SkillObjectUse>();
+  const res = useMemo(async () => await apis.getDataProfile(`${process.env.NEXT_PUBLIC_COLLECT_FIREBASE}`), [process.env.NEXT_PUBLIC_COLLECT_FIREBASE]);
 
   useEffect(() => {
     async function getData() {
-      const res = await apis.getDataProfile('professional');
-      setResponse(res)
+      setJson(await res)
     }
     getData()
     return () => {
       setExperience
+      setInterests
+      setLanguages
+      setEducation
+      setSkill
     }
-  }, [])
+  }, [res])
 
-  useEffect(() => {
-    setJson()
-    return () => {
-      setResponse
-    }
-  }, [response])
 
-  const setJson = () => {
+  const setJson = (response: TypeExp | null) => {
     if (response) {
       var jsonGood = JSON.parse(response.resume)
       setExperience(JSON.parse(jsonGood.experience))
@@ -58,19 +55,19 @@ function ResumePage() {
 
           <Header />
           {
-            experience && <Professional />
+            experience && <Professional exp={experience} />
           }
           {
-            education && <Education />
+            education && <Education education={education} />
           }
           {
-            skill && <TechnicalSkills />
+            skill && <TechnicalSkills skill={skill}/>
           }
           {
-            languages && <Language />
+            languages && <Language languages={languages}/>
           }
           {
-            interests && <Interests />
+            interests && <Interests interests={interests}/>
           }
 
           <BackToHomepage />
@@ -81,5 +78,6 @@ function ResumePage() {
     </>
   );
 }
+
 
 export default ResumePage;

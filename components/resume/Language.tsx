@@ -1,12 +1,14 @@
 import React from "react";
-
+import { LanguageProps } from "../../modules/ProfileModule";
 import { Skills, Skill } from "./Skills";
 
-const Language = () => (
+const Language = ({ languages }: LanguageProps) => (
   <Skills title="Languages">
-    <Skill name="Portuguese" level="Native" />
-    <Skill name="English" level="Fluent" />
-    <Skill name="Japanese" level="Basic" />
+    {languages.languages.map((data, index) => {
+      return (
+        <Skill key={`languages ${index + 1}`} name={`${data.lang}`} level={`${data.rank}`} />
+      );
+    })}
   </Skills>
 );
 

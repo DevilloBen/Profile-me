@@ -1,17 +1,16 @@
 import React from "react";
+import { SkillProps } from "../../modules/ProfileModule";
 
 import { Skills, Skill } from "./Skills";
 
-const TechnicalSkills = () => (
+const TechnicalSkills = ({ skill }: SkillProps) => (
   <Skills title="Skills">
-    <Skill name="Ruby / Rails" level="Advanced" />
-    <Skill name="Javascript / jQuery / React" level="Advanced" />
-    <Skill name="HTML / CSS" level="Advanced" />
-    <Skill name="SQL" level="Advanced" />
-    <Skill name="Git" level="Advanced" />
-    <Skill name="Typescript / NextJS / GraphQL" level="Intermediary" />
-    <Skill name="Python / PyQt / Serverless" level="Intermediary" />
-    <Skill name="AWS" level="Intermediary" />
+      {skill.skill.map((data, index) => {
+        return (
+          <Skill key= {`Skills ${index+1}`} name={`${data.type}`} level={`${data.list}`} />
+        );
+      })}
+
   </Skills>
 );
 

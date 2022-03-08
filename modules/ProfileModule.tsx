@@ -22,6 +22,14 @@ export interface ExperienceObject {
   detailwork: string;
 }
 
+export interface UseExpObject{
+  experience:ExperienceObject[]
+}
+
+export interface ProfessionalProps {
+  exp: UseExpObject
+}
+
 export interface EducationObject {
   school: string;
   degree: string;
@@ -41,4 +49,77 @@ export interface InterestsObject {
 export interface SkillObject {
   type: string
   list: string;
+}
+
+export interface ExpProps{
+  children: React.ReactNode,
+  title:string,
+  href:string,
+  company:string
+  where:string
+  when:string
+}
+
+export interface Education {
+  school: string;
+  degree: string;
+  country: string;
+  rangework: string;
+}
+
+export interface EducationArray {
+  education: Education[];
+}
+export interface EducationRootObject{
+  education: EducationArray
+}
+
+export interface SchoolPropsTwo {
+  children: React.ReactNode | undefined,
+  name: string,
+  href: string,
+  where: string,
+  when: string
+}
+export interface DegreeProps{
+  children:React.ReactNode
+  title:string
+}
+
+export interface Skill {
+  type: string;
+  list: string;
+}
+
+export interface SkillObjectUse {
+  skill: Skill[];
+}
+
+export interface SkillProps {
+  skill: SkillObjectUse
+}
+
+export interface Language {
+  lang: string;
+  rank: string;
+}
+
+export interface LangObject {
+  languages: Language[];
+}
+
+export interface LanguageProps {
+  languages: LangObject
+}
+
+export interface Interest {
+  list: string;
+}
+
+export interface InterestObject {
+  interests: Interest[];
+}
+
+export interface InterestsProps {
+  interests: InterestObject;
 }
