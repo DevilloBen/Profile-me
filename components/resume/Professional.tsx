@@ -1,13 +1,13 @@
 import React from "react";
-import { ExpProps, ExperienceObject, ProfessionalProps } from "../../modules/ProfileModule";
+import { ExpProps, ProfessionalProps } from "../../modules/ProfileModule";
 import SectionTitle from "../resume/SectionTitle";
 
-const Experience = ({ children, title, href, company, where, when }: ExpProps) => (
+const Experience = ({ children, title, link, company, where, when }: ExpProps) => (
   <li className="mb-5 dont-page-break">
     <div>
       <h5 className="font-medium">{title}</h5>
       <div className="small">
-        <a href={href} target="_blank" rel="noreferrer" className="link mr-1">
+        <a href={link} target="_blank" rel="noreferrer" className="link mr-1">
           {company}
         </a>
         - {where} | {when}
@@ -26,7 +26,7 @@ const Professional = ({ exp }: ProfessionalProps) => (
           <Experience
             key={`Experience ${index + 1}`}
             company={data.company}
-            href="https://railsware.com/"
+            link={data.link}
             title={data.role}
             where={data.country}
             when={data.rangework}

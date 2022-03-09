@@ -20,6 +20,7 @@ export interface ExperienceObject {
   country: string;
   rangework: string;
   detailwork: string;
+  link:string
 }
 
 export interface UseExpObject{
@@ -54,7 +55,7 @@ export interface SkillObject {
 export interface ExpProps{
   children: React.ReactNode,
   title:string,
-  href:string,
+  link:string,
   company:string
   where:string
   when:string
