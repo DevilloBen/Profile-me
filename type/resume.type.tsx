@@ -1,17 +1,17 @@
 export interface GetDataTest {
-  id: string
-  node: string
+  id: string;
+  node: string;
 }
 
 export interface SchoolProps {
-  children: React.ReactNode,
-  href: string,
-  name: string,
-  detail: string
+  children: React.ReactNode;
+  href: string;
+  name: string;
+  detail: string;
 }
 
 export interface TypeExp {
-  resume: string
+  resume: string;
 }
 
 export interface ExperienceObject {
@@ -20,15 +20,23 @@ export interface ExperienceObject {
   country: string;
   rangework: string;
   detailwork: string;
-  link:string
+  link: string;
 }
 
-export interface UseExpObject{
-  experience:ExperienceObject[]
+export type ProfilePropsType = {
+  experience: string;
+  education: string;
+  languages: string;
+  interests: string;
+  skill: string;
+};
+
+export interface UseExpObject {
+  worked: ExperienceObject[];
 }
 
 export interface ProfessionalProps {
-  exp: UseExpObject
+  exp: UseExpObject;
 }
 
 export interface EducationObject {
@@ -36,6 +44,7 @@ export interface EducationObject {
   degree: string;
   country: string;
   rangework: string;
+  link: string;
 }
 
 export interface LanguagesObject {
@@ -48,17 +57,17 @@ export interface InterestsObject {
 }
 
 export interface SkillObject {
-  type: string
+  type: string;
   list: string;
 }
 
-export interface ExpProps{
-  children: React.ReactNode,
-  title:string,
-  link:string,
-  company:string
-  where:string
-  when:string
+export interface ExpProps {
+  children: React.ReactNode;
+  title: string;
+  link: string;
+  company: string;
+  where: string;
+  when: string;
 }
 
 export interface Education {
@@ -66,25 +75,26 @@ export interface Education {
   degree: string;
   country: string;
   rangework: string;
+  link: string;
 }
 
 export interface EducationArray {
   education: Education[];
 }
-export interface EducationRootObject{
-  education: EducationArray
+export interface EducationRootObject {
+  education: EducationArray;
 }
 
 export interface SchoolPropsTwo {
-  children: React.ReactNode | undefined,
-  name: string,
-  href: string,
-  where: string,
-  when: string
+  children: React.ReactNode | undefined;
+  name: string;
+  href: string;
+  where: string;
+  when: string;
 }
-export interface DegreeProps{
-  children:React.ReactNode
-  title:string
+export interface DegreeProps {
+  children: React.ReactNode;
+  title: string;
 }
 
 export interface Skill {
@@ -97,20 +107,20 @@ export interface SkillObjectUse {
 }
 
 export interface SkillProps {
-  skill: SkillObjectUse
+  skill: SkillObjectUse;
 }
 
-export interface Language {
+export interface LanguagePropsType {
   lang: string;
   rank: string;
 }
 
 export interface LangObject {
-  languages: Language[];
+  languages: LanguagePropsType[];
 }
 
 export interface LanguageProps {
-  languages: LangObject
+  languages: LangObject;
 }
 
 export interface Interest {

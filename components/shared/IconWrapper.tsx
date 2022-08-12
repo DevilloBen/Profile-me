@@ -1,6 +1,15 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
-const IconWrapper = ({ children, className, width = 15 }:any = {}) => {
+type IconWrapperPropsType = PropsWithChildren<{
+  className?: string;
+  width?: number;
+}>;
+
+const IconWrapper = ({
+  children,
+  className,
+  width = 15,
+}: IconWrapperPropsType) => {
   const margin = (24 - width) / 2;
 
   return (

@@ -1,12 +1,20 @@
 import { faFile } from "@fortawesome/free-regular-svg-icons";
-import { faFireFlameCurved, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFireFlameCurved,
+  faLaptopCode,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import IconWrapper from "../shared/IconWrapper";
 import SectionTitle from "./SectionTitle";
 
+type ProjectPropsType = PropsWithChildren<{
+  name: string;
+  href: string;
+  icon: React.ReactNode;
+}>;
 
-const Project = ({ children, name, href, icon }:any) => (
+const Project = ({ children, name, href, icon }: ProjectPropsType) => (
   <div className="mb-2 md:mb-0">
     <span className="inline-flex items-center">
       {icon}&nbsp;
@@ -56,8 +64,6 @@ const Projects = () => (
     >
       personal website, built using Next.js, Typescript and Tailwind CSS
     </Project>
-
-
 
     <div>
       <i aria-hidden className="fas fa-fw mr-1 fa-hourglass-half"></i>

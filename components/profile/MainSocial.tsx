@@ -1,15 +1,26 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import Link from "next/link";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import IconWrapper from "../shared/IconWrapper";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
+type ProfileButtonPropsType = PropsWithChildren<{
+  href: string;
+  className?: string;
+  external?: boolean;
+}>;
 
 const externalProps = { target: "_blank", rel: "noreferrer" };
 
-function ProfileButton({ href, className, external, children }:any) {
+function ProfileButton({
+  href,
+  className,
+  external,
+  children,
+}: ProfileButtonPropsType) {
   const link = (
     <a
       href={href}
@@ -17,10 +28,9 @@ function ProfileButton({ href, className, external, children }:any) {
       {...(external ? externalProps : {})}
     >
       <div className="flex items-center">{children}</div>
-
       {external && (
         <IconWrapper>
-          <FontAwesomeIcon icon={faExternalLinkAlt} />
+          <FontAwesomeIcon icon={faExternalLinkAlt as IconProp} />
         </IconWrapper>
       )}
     </a>
@@ -33,21 +43,21 @@ const MainSocial = () => (
   <div className="grid gap-1">
     <ProfileButton href="https://github.com/DevilloBen" external>
       <IconWrapper className="mr-1">
-        <FontAwesomeIcon icon={faGithub} />
+        <FontAwesomeIcon icon={faGithub as IconProp} />
       </IconWrapper>
       GitHub
     </ProfileButton>
 
     <ProfileButton href="https://linkedin.com/in/benchapon" external>
       <IconWrapper className="mr-1">
-        <FontAwesomeIcon icon={faLinkedin} />
+        <FontAwesomeIcon icon={faLinkedin as IconProp} />
       </IconWrapper>
       LinkedIn
     </ProfileButton>
 
-    <ProfileButton href="/resume" className="border-fake">
+    <ProfileButton href="/Resume" className="border-fake">
       <IconWrapper width={12} className="mr-1">
-        <FontAwesomeIcon icon={faFileAlt} />
+        <FontAwesomeIcon icon={faFileAlt as IconProp} />
       </IconWrapper>
       Full resume
     </ProfileButton>

@@ -1,8 +1,15 @@
 import React from "react";
-import { ExpProps, ProfessionalProps } from "../../modules/ProfileModule";
+import { ExperienceObject, ExpProps } from "../../type/resume.type";
 import SectionTitle from "../resume/SectionTitle";
 
-const Experience = ({ children, title, link, company, where, when }: ExpProps) => (
+const Experience = ({
+  children,
+  title,
+  link,
+  company,
+  where,
+  when,
+}: ExpProps) => (
   <li className="mb-5 dont-page-break">
     <div>
       <h5 className="font-medium">{title}</h5>
@@ -17,11 +24,11 @@ const Experience = ({ children, title, link, company, where, when }: ExpProps) =
   </li>
 );
 
-const Professional = ({ exp }: ProfessionalProps) => (
+const Professional = ({ exp }: any) => (
   <section>
     <SectionTitle>Professional Experience</SectionTitle>
     <ul className="list-disc list-outside">
-      {exp.experience.map((data, index) => {
+      {exp.map((data: ExperienceObject, index: number) => {
         return (
           <Experience
             key={`Experience ${index + 1}`}

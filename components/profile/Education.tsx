@@ -1,5 +1,5 @@
 import React from "react";
-import { SchoolProps } from "../../modules/ProfileModule";
+import { SchoolProps } from "../../type/resume.type";
 
 const School = ({ children, href, name, detail }: SchoolProps) => (
   <p className="mb-2 md:mb-0">
@@ -15,11 +15,19 @@ const School = ({ children, href, name, detail }: SchoolProps) => (
 
 const Education = () => (
   <section>
-    <School name="Silpakorn University" href="https://www.su.ac.th" detail="Thailand, 2018">
+    <School
+      name="Silpakorn University"
+      href="https://www.su.ac.th"
+      detail="Thailand, 2018"
+    >
       Bachelor’s Degree of Computer Science from
     </School>
 
-    <School name="Samutsakhonwittayalai School" href="http://www.sksc.ac.th/" detail="Thailand, 2012">
+    <School
+      name="Samutsakhonwittayalai School"
+      href="http://www.sksc.ac.th/"
+      detail="Thailand, 2012"
+    >
       Completed high school from
     </School>
   </section>

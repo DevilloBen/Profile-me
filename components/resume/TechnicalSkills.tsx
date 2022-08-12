@@ -1,16 +1,19 @@
 import React from "react";
-import { SkillProps } from "../../modules/ProfileModule";
+import { SkillObject, SkillProps } from "../../type/resume.type";
 
 import { Skills, Skill } from "./Skills";
 
-const TechnicalSkills = ({ skill }: SkillProps) => (
+const TechnicalSkills = ({ skill }: any) => (
   <Skills title="Skills">
-      {skill.skill.map((data, index) => {
-        return (
-          <Skill key= {`Skills ${index+1}`} name={`${data.type}`} level={`${data.list}`} />
-        );
-      })}
-
+    {skill.map((data: SkillObject, index: number) => {
+      return (
+        <Skill
+          key={`Skills ${index + 1}`}
+          name={`${data.type}`}
+          level={`${data.list}`}
+        />
+      );
+    })}
   </Skills>
 );
 

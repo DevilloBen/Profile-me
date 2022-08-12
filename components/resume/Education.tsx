@@ -1,5 +1,9 @@
 import React from "react";
-import { DegreeProps, EducationRootObject, SchoolPropsTwo } from "../../modules/ProfileModule";
+import {
+  DegreeProps,
+  EducationObject,
+  SchoolPropsTwo,
+} from "../../type/resume.type";
 import SectionTitle from "../resume/SectionTitle";
 
 const School = ({ children, name, href, where, when }: SchoolPropsTwo) => (
@@ -7,11 +11,9 @@ const School = ({ children, name, href, where, when }: SchoolPropsTwo) => (
     <a href={href} target="_blank" rel="noreferrer" className="link mr-1">
       {name}
     </a>
-
     <p className="small">
       {where} | {when}
     </p>
-
     {children && <p className="small">{children}</p>}
   </div>
 );
@@ -25,19 +27,20 @@ const Degree = ({ children, title }: DegreeProps) => (
   </li>
 );
 
-const Education = ({ education }: EducationRootObject) => (
+const Education = ({ education }: any) => (
   <section>
     <SectionTitle>Academic Education</SectionTitle>
-
     <ul className="list-disc list-outside">
-      {education.education.map((data, index) => {
+      {education.map((data: EducationObject, index: number) => {
         return (
           <Degree key={`education ${index + 1}`} title={data.degree}>
             <School
               name={data.school}
-              href="https://ufsc.br"
+              href={data.link}
               where={data.country}
-              when={data.rangework} children={undefined} />
+              when={data.rangework}
+              children={undefined}
+            />
           </Degree>
         );
       })}
