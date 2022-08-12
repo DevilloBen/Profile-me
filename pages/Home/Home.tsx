@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useContext } from "react";
+import { Fragment } from "react";
 import Education from "../../components/profile/Education";
 import Header from "../../components/profile/Header";
 import Hr from "../../components/profile/Hr";
@@ -11,7 +11,7 @@ import Social from "../../components/profile/Social";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Fragment>
       <Head>
         <title>Benchapon Sakhonkam | Full stack developer</title>
       </Head>
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-    </>
+    </Fragment>
   );
 };
 

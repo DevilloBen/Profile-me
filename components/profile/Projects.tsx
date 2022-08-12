@@ -1,3 +1,4 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faFile } from "@fortawesome/free-regular-svg-icons";
 import {
   faFireFlameCurved,
@@ -35,7 +36,10 @@ const Projects = () => (
       href="https://ezygas.co/"
       icon={
         <IconWrapper>
-          <FontAwesomeIcon icon={faFireFlameCurved} className="text-red-500" />
+          <FontAwesomeIcon
+            icon={faFireFlameCurved as IconProp}
+            className="text-red-500"
+          />
         </IconWrapper>
       }
     >
@@ -46,7 +50,10 @@ const Projects = () => (
       href="https://www.pttplc.com/th/Home.aspx"
       icon={
         <IconWrapper>
-          <FontAwesomeIcon icon={faLaptopCode} className="text-black-500" />
+          <FontAwesomeIcon
+            icon={faLaptopCode as IconProp}
+            className="text-black-500"
+          />
         </IconWrapper>
       }
     >
@@ -58,7 +65,11 @@ const Projects = () => (
       href="https://github.com/DevilloBen/Profile-me"
       icon={
         <IconWrapper>
-          <FontAwesomeIcon icon={faFile} width={14} className="text-gray-700" />
+          <FontAwesomeIcon
+            icon={faFile as IconProp}
+            width={14}
+            className="text-gray-700"
+          />
         </IconWrapper>
       }
     >
