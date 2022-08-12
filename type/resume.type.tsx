@@ -86,7 +86,6 @@ export interface EducationRootObject {
 }
 
 export interface SchoolPropsTwo {
-  children: React.ReactNode | undefined;
   name: string;
   href: string;
   where: string;

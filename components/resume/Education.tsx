@@ -6,7 +6,7 @@ import {
 } from "../../type/resume.type";
 import SectionTitle from "../resume/SectionTitle";
 
-const School = ({ children, name, href, where, when }: SchoolPropsTwo) => (
+const School = ({  name, href, where, when }: SchoolPropsTwo) => (
   <div className="mb-2">
     <a href={href} target="_blank" rel="noreferrer" className="link mr-1">
       {name}
@@ -14,7 +14,6 @@ const School = ({ children, name, href, where, when }: SchoolPropsTwo) => (
     <p className="small">
       {where} | {when}
     </p>
-    {children && <p className="small">{children}</p>}
   </div>
 );
 
@@ -39,10 +38,9 @@ const Education = ({ education }: any) => (
               href={data.link}
               where={data.country}
               when={data.rangework}
-              children={undefined}
             />
           </Degree>
-        );
+        )
       })}
     </ul>
   </section>

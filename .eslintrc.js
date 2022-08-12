@@ -1,24 +1,9 @@
 module.exports = {
-  root: true,
-  extends: ["parser:@babel/eslint-parser"],
-  env: {
-    node: true,
-    es2020: true,
-  },
-  parserOptions: {
-    sourceType: "module",
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-  rules: {
-    // temporarily warning only, until converting stuff to TS
-    "react/prop-types": "warn",
-    // temporarily warning only, eslint should support noopener as enough
-    "react/jsx-no-target-blank": "warn",
-    // allow usage of `"` and `'` outside JSX
-    "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
-  },
+
+  "extends": "next",
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
+  }
+
 };
