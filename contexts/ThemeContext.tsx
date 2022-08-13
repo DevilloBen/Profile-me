@@ -21,6 +21,7 @@ export const ThemeProvider = ({ children }: ThemeProviderPropsType) => {
 
   const toggleTheme = () => {
     let htmlDataSet = document.body.parentElement?.dataset;
+    console.log(htmlDataSet);
     if (htmlDataSet) {
       let userMode = htmlDataSet.theme;
       htmlDataSet.theme = userMode === "0" ? "1" : "0";
