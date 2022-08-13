@@ -1,11 +1,16 @@
 import React, { PropsWithChildren } from "react";
 import Link from "next/link";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faFileAlt, faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { faCloudMoon, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import IconWrapper from "../shared/IconWrapper";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
+type MainSocialPropsType = {
+  checked: boolean;
+  handleThame: () => void;
+};
 
 type ProfileButtonPropsType = PropsWithChildren<{
   href: string;
@@ -39,7 +44,7 @@ function ProfileButton({
   return external ? link : <Link href={href}>{link}</Link>;
 }
 
-const MainSocial = () => (
+const MainSocial = ({ handleThame, checked }: MainSocialPropsType) => (
   <div className="grid gap-1">
     <ProfileButton href="https://github.com/DevilloBen" external>
       <IconWrapper className="mr-1">
@@ -61,6 +66,19 @@ const MainSocial = () => (
       </IconWrapper>
       Full resume
     </ProfileButton>
+    <div className="flex justify-between items-center">
+    <div className="flex items-center">
+    <IconWrapper className="mr-1">
+        <FontAwesomeIcon icon={faCloudMoon as IconProp} />
+      </IconWrapper>
+      Theme
+      </div>
+
+      <label className="switch">
+        <input type="checkbox" onChange={handleThame} checked={checked} />
+        <span className="slider round" />
+      </label>
+    </div>
   </div>
 );
 

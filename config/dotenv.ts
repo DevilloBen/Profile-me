@@ -24,6 +24,10 @@ export const NEXT_PUBLIC_COLLECT_LANGUAGES =
 export const NEXT_PUBLIC_COLLECT_INTERESTS =
   process.env.NEXT_PUBLIC_COLLECT_INTERESTS || "interests";
 
+export const NEXT_PUBLIC_THEME = process.env.NEXT_PUBLIC_THEME || "theme";
+export const NEXT_PUBLIC_THEME_VALIE =
+  process.env.NEXT_PUBLIC_THEME_VALIE || "0";
+
 export const API_COLLECT = [
   NEXT_PUBLIC_COLLECT_WORKED,
   NEXT_PUBLIC_COLLECT_SKILLS,

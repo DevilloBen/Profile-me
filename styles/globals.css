@@ -1,10 +1,41 @@
 @tailwind base;
+@import "tailwindcss/components";
 
-html,
+
+html{
+  --bg: rgb(242, 247, 255);
+  --text_color:#000;
+  --text_h2_color:rgb(26, 26, 26);
+  --border_color:rgba(0, 0, 0, 0.3);
+  --text_java_color:rgb(26, 26, 26);
+  --text_link_color:#007bff
+}
+
+html[data-theme='1'] {
+  --bg: rgb(8, 8, 22);
+  --text_color:rgb(247, 247, 247);
+  --text_h2_color:rgb(209, 207, 207);
+  --border_color:rgba(255, 255, 255, 0.3);
+  --text_java_color:rgb(255, 234, 243);
+  --text_link_color:#007bff
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  @layer text-gray-900 antialiased;
-
   font-family: Inter, Arial, sans-serif;
+  background-color: var(--bg);
+  color:var(--text_color) ;
+}
+
+.iconJava{
+  color: var(--text_java_color);
+}
+
+h2{
+  color:var(--text_h2_color)
 }
 
 hr {
@@ -15,7 +46,6 @@ hr {
   margin: 1.5cm;
 }
 
-@import "tailwindcss/components";
 
 .container {
   max-width: 900px;
@@ -43,7 +73,7 @@ hr {
 }
 
 .link {
-  color: #007bff;
+  color: var(--text_link_color);
 }
 
 .link:hover {
@@ -56,6 +86,10 @@ hr {
 
 .small {
   font-size: 0.7em;
+}
+
+.medium {
+  font-size: 1.0em;
 }
 
 @media print {
@@ -95,7 +129,7 @@ hr {
 }
 
 .border-fake {
-  box-shadow: inset 0 0 0 0.1em rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 0.1em var(--border_color);
 }
 
 .button-blog,
@@ -114,6 +148,65 @@ hr {
   background-position: right -20px top -20px;
   background-size: 80px;
 }
-* {
-  box-sizing: border-box;
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

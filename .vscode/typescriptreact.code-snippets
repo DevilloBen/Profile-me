@@ -1,0 +1,31 @@
+{
+	"React Component": {
+		"prefix": "sc",
+		"description": "Create skyller react function component",
+		"body": [
+			"import { PropsWithChildren } from 'react';",
+			"import styles from './${1:Component}.module.css';",
+			"",
+			"type ${1:Component}PropsType = PropsWithChildren<{",
+			"\t/**",
+			"\t * Simple props description",
+			"\t*/",
+			"\tsimple: boolean;",
+			"}>;",
+			"",
+			"/**",
+			" * ${1:Component} component",
+			" * simple description to explain what is this component",
+			" *",
+			" * @param {${1:Component}PropsType} props",
+			" * @returns",
+			"*/",
+			"const ${1:Component} = ({ simple, children }: ${1:Component}PropsType) => {",
+			"\treturn <div className={styles.${1:Component}}>{children}</div>;",
+			"};",
+			"",
+			"export default ${1:Component};",
+			"",
+		]
+	}
+}

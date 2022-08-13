@@ -10,8 +10,9 @@ interface HeaderResumeProps {
   location: boolean;
   phone: boolean;
   email: boolean;
+  medium: boolean;
 }
-
+// https://medium.com/@sakhonkam.b
 const Header = ({
   headings,
   site,
@@ -20,6 +21,7 @@ const Header = ({
   location,
   phone,
   email,
+  medium,
 }: HeaderResumeProps) => (
   <header className="text-right dont-page-break">
     <Headings {...headings} />
@@ -63,6 +65,19 @@ const Header = ({
       </p>
     )}
 
+    {medium && (
+      <p className="text-base">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://medium.com/@sakhonkam.b"
+          className="link"
+        >
+          medium.com/@sakhonkam.b
+        </a>
+      </p>
+    )}
+
     {location && (
       <p className="text-muted text-base">Thailand, Bangkok (UTC-7)</p>
     )}
@@ -81,6 +96,7 @@ Header.defaultProps = {
   location: true,
   phone: true,
   email: true,
+  medium: true,
 };
 
 export default Header;

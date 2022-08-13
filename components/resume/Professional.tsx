@@ -13,13 +13,13 @@ const Experience = ({
   <li className="mb-5 dont-page-break">
     <div>
       <h5 className="font-medium">{title}</h5>
-      <div className="small">
+      <div className="medium">
         <a href={link} target="_blank" rel="noreferrer" className="link mr-1">
           {company}
         </a>
         - {where} | {when}
       </div>
-      <div>{children}</div>
+      <div className="small">{children}</div>
     </div>
   </li>
 );
