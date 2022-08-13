@@ -7,7 +7,6 @@ const StaticMode = ({ children }: StaticModePropsType) => {
   const onHandleStaticMode = () => {
     if (typeof window !== "undefined") {
       let COLOR_THEME = localStorage?.getItem(NEXT_PUBLIC_THEME);
-      console.log(COLOR_THEME);
       console.log(document.body.parentElement);
       if (COLOR_THEME) {
         console.log("if");

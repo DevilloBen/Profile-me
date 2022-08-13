@@ -4,7 +4,7 @@ import CustomHeader from "../components/CustomHeader";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" data-theme="0">
       <CustomHeader />
       <Head>
         <link
