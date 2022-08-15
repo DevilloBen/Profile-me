@@ -22,7 +22,10 @@ const CustomHeader: NextPage = () => {
         property="og:description"
         content="Mostly focused on Node js. Also a React, Javascript, and UX enthusiast."
       />
-      <meta property="og:image" content="/profile.jpg" />
+      <meta
+        property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/profile-me-dab9a.appspot.com/o/profile.jpg?alt=media&token=d121b787-9588-4d4d-b317-e5d7f4dfc162"
+      />
       <meta property="og:image:width" content="200" />
       <meta property="og:image:height" content="200" />
       <meta property="og:type" content="profile" />

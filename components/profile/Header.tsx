@@ -1,15 +1,12 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
-  faAndroid,
   faApple,
   faGooglePlay,
   faHtml5,
-  faJava,
   faJs,
-  faPython,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { faLightbulb, faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import IconWrapper from "../shared/IconWrapper";
