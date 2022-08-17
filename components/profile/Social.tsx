@@ -26,7 +26,7 @@ const Social = () => (
           <FontAwesomeIcon icon={faFileAlt as IconProp} width={12} />
         </IconWrapper>
 
-        <Link href="/resume">
+        <Link href="/Resume">
           <a className="link">Full resume</a>
         </Link>
       </div>

@@ -1,14 +1,15 @@
 @tailwind base;
 @import "tailwindcss/components";
 
-
 html{
   --bg: rgb(242, 247, 255);
   --text_color:#000;
   --text_h2_color:rgb(26, 26, 26);
   --border_color:rgba(0, 0, 0, 0.3);
   --text_java_color:rgb(26, 26, 26);
-  --text_link_color:#007bff
+  --text_link_color:#007bff;
+  --btn-bg-resume:#02248a;
+  --btn-bg-hover-resume:#1842be;
 }
 
 html[data-theme='1'] {
@@ -17,7 +18,9 @@ html[data-theme='1'] {
   --text_h2_color:rgb(209, 207, 207);
   --border_color:rgba(255, 255, 255, 0.3);
   --text_java_color:rgb(255, 234, 243);
-  --text_link_color:#007bff
+  --text_link_color:#007bff;
+  --btn-bg-resume:#ff412c;
+  --btn-bg-hover-resume:#f69696;
 }
 
 * {
@@ -46,13 +49,12 @@ hr {
   margin: 1.5cm;
 }
 
-
 .container {
   max-width: 900px;
 }
 
 .btn {
-  @layer rounded p-2;
+  @apply rounded p-2;
 }
 
 .btn:active,
@@ -61,15 +63,24 @@ hr {
 }
 
 .btn-block {
-  @layer block;
+  @apply block;
+}
+
+.btn-resume {
+  @apply text-gray-100;
+  background-color: var(--btn-bg-resume);
+}
+
+.btn-resume:hover {
+  background-color: var( --btn-bg-hover-resume);
 }
 
 .btn-light {
-  @layer bg-gray-200 text-gray-800;
+  @apply bg-gray-200 text-gray-800;
 }
 
 .btn-light:hover {
-  @layer bg-gray-300;
+  @apply bg-gray-300;
 }
 
 .link {
@@ -81,7 +92,7 @@ hr {
 }
 
 .text-muted {
-  @layer text-gray-600;
+  @apply text-gray-600;
 }
 
 .small {
@@ -135,7 +146,7 @@ hr {
 .button-blog,
 .button-blog:hover,
 .button-blog:active {
-  @layer text-gray-200 bg-gray-900 font-bold;
+  @apply text-gray-200 bg-gray-900 font-bold;
   background-image: url("/drawkit-rocket.svg");
   background-repeat: no-repeat;
   background-position: right -30px top -10px;
@@ -148,8 +159,6 @@ hr {
   background-position: right -20px top -20px;
   background-size: 80px;
 }
-
-
 
 .switch {
   position: relative;

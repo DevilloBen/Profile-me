@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { getDataProfile } from "../apis/resume.api";
 import { ResumeContext } from "../contexts";
 import {
@@ -12,18 +12,20 @@ import {
 const useResume = () => {
   const { resume, toggleApi, appendResume, cencelApi } =
     useContext(ResumeContext);
+  const [loader, serLoader] = useState<boolean>(toggleApi);
 
   useEffect(() => {
     if (toggleApi) return;
     getDataProfile()
       .then((data) => {
         appendResume(data);
+        serLoader(true);
       })
       .catch((error) => {
         console.log(error);
       });
 
-    cencelApi(false);
+    cencelApi(true);
   }, []);
 
   const worked = useMemo<WorkedPropsType>(() => {
@@ -52,6 +54,7 @@ const useResume = () => {
     skills,
     languages,
     interest,
+    loader,
   };
 };
 
