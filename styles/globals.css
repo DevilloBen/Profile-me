@@ -19,8 +19,8 @@ html[data-theme='1'] {
   --border_color:rgba(255, 255, 255, 0.3);
   --text_java_color:rgb(255, 234, 243);
   --text_link_color:#007bff;
-  --btn-bg-resume:#ff412c;
-  --btn-bg-hover-resume:#f69696;
+  --btn-bg-resume:#2c61ff;
+  --btn-bg-hover-resume:#96c1f6;
 }
 
 * {
@@ -73,6 +73,7 @@ hr {
 
 .btn-resume:hover {
   background-color: var( --btn-bg-hover-resume);
+  color: var(--bg)
 }
 
 .btn-light {
