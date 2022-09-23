@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World Develop'
+                echo 'Hello World Develop Git.'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Hello World Build.'
             }
         }
     }
