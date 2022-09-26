@@ -12,5 +12,10 @@ pipeline {
                 echo 'Hello World Build.'
             }
         }
+         stage('Clean') {
+            steps {
+                echo 'Hello World Clean.'
+            }
+        }
     }
 }
